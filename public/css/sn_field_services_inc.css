@@ -1,0 +1,171 @@
+body {
+    color: black;
+    margin: 10mm auto;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header,
+.footer {
+    width: 100%;
+    text-align: left;
+}
+
+.header {
+    top: 0;
+    height: 150px;
+}
+
+.footer {
+    bottom: 0;
+    height: 100px;
+}
+
+.company-logo {
+    max-width: 30%;
+    /* Adjust to your preferred width */
+    max-height: 530px;
+    /* Adjust as needed */
+    order: 2;
+    /* Set the order to 2 to move it to the right in the flex container */
+    position: absolute;
+    top: 30px;
+    /* Adjust to your requirement */
+    right: 5px;
+    /* Adjust to your requirement */
+}
+
+.company-name {
+    font-family: Montserrat, sans-serif;
+    font-size: 48px;
+    color: green;
+    top: 0;
+}
+
+.company-address {
+    font-size: 27px;
+    color: black;
+    margin-top: 5px;
+    /* Adjust margin as needed */
+}
+
+.contact-info {
+    font-size: 27px;
+    color: black;
+    margin-top: 5px;
+    /* Adjust margin as needed */
+    margin-bottom: 20px;
+    /* Adjust the margin-bottom to create space */
+}
+.line-before {
+    border-top: 1px solid #000;
+    margin: 5px 0;
+}
+
+.line-after {
+    border-top: 1px solid #000;
+    margin: 5px 0;
+}
+.content {
+    padding-top: 200px;
+    padding-bottom: 110px;
+    display: flex;
+    align-items: flex-start; /* Vertical alignment if needed */
+    justify-content: flex-start; /* Aligns children to the start (left) */
+}
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        color: black;
+    }
+
+    .header,
+    .footer {
+        width: 100%;
+        text-align: left;
+        position: fixed;
+    }
+
+    .header {
+        top: 0;
+        height: 150px;
+    }
+
+    .footer {
+        bottom: 0;
+        height: 100px;
+    }
+    .company-logo {
+        max-width: 30%;
+        /* Adjust to your preferred width */
+        max-height: 530px;
+        /* Adjust as needed */
+        order: 2;
+        /* Set the order to 2 to move it to the right in the flex container */
+        position: absolute;
+        top: 30px;
+        /* Adjust to your requirement */
+        right: 5px;
+        /* Adjust to your requirement */
+    }
+
+    .company-name {
+        font-family: Montserrat, sans-serif;
+        font-size: 48px;
+        color: green;
+        top: 0;
+    }
+
+    .company-address {
+        font-size: 27px;
+        color: black;
+        margin-top: 5px;
+        /* Adjust margin as needed */
+    }
+
+    .contact-info {
+        font-size: 27px;
+        color: black;
+        margin-top: 5px;
+        /* Adjust margin as needed */
+        margin-bottom: 20px;
+        /* Adjust the margin-bottom to create space */
+    }
+    .line-before {
+        border-top: 1px solid #000;
+        margin: 5px 0;
+    }
+
+    .line-after {
+        border-top: 1px solid #000;
+        margin: 5px 0;
+    }
+    .content {
+        padding-top: 360px;
+        padding-bottom: 110px;
+    }
+
+    .page-break {
+        page-break-before: always;
+        margin-top: 360px;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    #clientCode {
+        display: none;
+    }
+
+    #woNumber {
+        font-size: 21px;
+    }
+    #propertyAddress {
+        font-size: 21px;
+    }
+}

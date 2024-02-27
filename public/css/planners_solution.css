@@ -1,0 +1,249 @@
+body {
+    color: black;
+    margin: 10mm auto;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    width: 100%;
+    text-align: left;
+}
+
+.header {
+    top: 0;
+    height: 150px;
+}
+
+.footer {
+    bottom: 0;
+    height: 100px;
+}
+
+/* Increase the size of the logo and position it on the top left */
+.company-logo {
+    width: 38%; /* Adjust the width as needed */
+    max-width: none; /* Remove the max-width restriction */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 800px; /* Increase the max-height value to make the logo taller */
+    order: 1; /* Set the order to 1 to place it on the left side */
+    position: absolute;
+    top: 10px; /* Adjust to your requirement to place it on the top left */
+}
+
+/* Place the company name on the top right */
+.company-name {
+    font-family: monospace, sans-serif;
+    font-size: 43px; /* Adjust font size as needed */
+    color: #2e50a8;
+    position: absolute;
+    top: 30px;
+    right: 0px; /* Adjust to your requirement to place it on the top right */
+    text-align: right;
+}
+
+/* Place the company address below the company name */
+.company-address {
+    font-family: monospace, sans-serif;
+    font-size: 23px; /* Adjust font size as needed */
+    color: black;
+    position: absolute;
+    top: 80px; /* Adjust to create vertical spacing */
+    right: 0px; /* Adjust to your requirement to place it on the top right */
+    text-align: right;
+}
+
+/* Place the contact info below the company address */
+.contact-info {
+    font-family: monospace, sans-serif;
+    font-size: 23px; /* Adjust font size as needed */
+    color: black;
+    position: absolute;
+    top: 110px; /* Adjust to create vertical spacing */
+    right: 0px; /* Adjust to your requirement to place it on the top right */
+    text-align: right;
+}
+
+.line-before {
+    border-top: 1px solid #000;
+    margin: 5px 0;
+}
+
+.line-after {
+    display: none;
+}
+
+.scope-of-work {
+    text-decoration: underline;
+    color: #2e50a8;
+}
+/* Add spacing between the company info and other content */
+.content {
+    padding-top: 180px; /* Adjust the padding-top to create space */
+    padding-bottom: 110px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.footer .company-logo {
+    display: none;
+}
+.footer .company-name {
+    display: none;
+}
+
+.footer .contact-info {
+    display: none;
+}
+
+.footer .company-address {
+    display: none;
+}
+
+/* Add spacing between client code, WO number, and address */
+#clientCode {
+    font-size: 17px; /* Adjust font size as needed */
+    color: black;
+    margin-top: 120px; /* Adjust margin-top to create space */
+    text-align: left;
+    left: 20px;
+}
+#woNumber {
+    font-size: 17px; /* Adjust font size as needed */
+    color: black;
+    margin-top: 10px; /* Adjust margin-top to create space */
+    text-align: left;
+}
+#propertyAddress {
+    font-size: 17px; /* Adjust font size as needed */
+    color: black;
+    margin-top: 10px; /* Adjust margin-top to create space */
+    text-align: left;
+}
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        color: black;
+    }
+
+    .header,
+    .footer {
+        width: 100%;
+        text-align: left;
+        position: fixed;
+    }
+
+    .header {
+        top: 0;
+        height: 150px;
+    }
+
+    .footer {
+        bottom: 0;
+        height: 100px;
+    }
+
+    /* Increase the size of the logo and position it on the top left */
+    .company-logo {
+        width: 38%; /* Adjust the width as needed */
+        max-width: none; /* Remove the max-width restriction */
+        height: auto; /* Maintain the aspect ratio */
+        max-height: 800px; /* Increase the max-height value to make the logo taller */
+        order: 1; /* Set the order to 1 to place it on the left side */
+        position: absolute;
+        top: 10px; /* Adjust to your requirement to place it on the top left */
+    }
+
+    /* Place the company name on the top right */
+    .company-name {
+        font-family: monospace, sans-serif;
+        font-size: 43px; /* Adjust font size as needed */
+        color: #2e50a8;
+        position: absolute;
+        top: 10px; /* Adjust to your requirement to place it on the top right */
+        right: 0px; /* Adjust to your requirement to place it on the top right */
+        text-align: right;
+    }
+
+    /* Place the company address below the company name */
+    .company-address {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px; /* Adjust font size as needed */
+        color: black;
+        position: absolute;
+        top: 60px; /* Adjust to create vertical spacing */
+        right: 0px; /* Adjust to your requirement to place it on the top right */
+        text-align: right;
+    }
+
+    /* Place the contact info below the company address */
+    .contact-info {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px; /* Adjust font size as needed */
+        color: black;
+        position: absolute;
+        top: 90px; /* Adjust to create vertical spacing */
+        right: 0px; /* Adjust to your requirement to place it on the top right */
+        text-align: right;
+    }
+
+    .line-before {
+        border-top: 1px solid #000;
+        margin: 5px 0;
+    }
+
+    .line-after {
+        display: none;
+    }
+    .content {
+        padding-top: 290px; /* Adjust the padding-top to create space */
+        padding-bottom: 110px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    /* Add spacing between client code, WO number, and address */
+    #clientCode {
+        display: none;
+    }
+    #woNumber {
+        font-size: 17px; /* Adjust font size as needed */
+        color: black;
+        margin-top: 120px; /* Adjust margin-top to create space */
+        text-align: left;
+    }
+    #propertyAddress {
+        font-size: 17px; /* Adjust font size as needed */
+        color: black;
+        margin-top: 10px; /* Adjust margin-top to create space */
+        text-align: left;
+    }
+
+    .page-break {
+        page-break-before: always;
+        margin-top: 290px;
+    }
+
+    .no-print {
+        display: none;
+    }
+    .footer .company-logo {
+        display: none;
+    }
+    .footer .company-name {
+        display: none;
+    }
+
+    .footer .contact-info {
+        display: none;
+    }
+
+    .footer .company-address {
+        display: none;
+    }
+}

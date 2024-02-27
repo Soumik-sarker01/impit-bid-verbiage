@@ -1,0 +1,221 @@
+/* Basic Styles */
+.form-control,
+.btn {
+    font-size: 0.8rem; /* Slightly smaller font size for inputs and buttons */
+}
+
+.select2-container--default
+    .select2-selection--multiple
+    .select2-selection__rendered {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Additional styles for Select2 */
+.select2-container--default .select2-selection--single {
+    font-size: 0.8rem; /* Smaller font size */
+    height: auto; /* Adjust height */
+    padding: 4px; /* Reduced padding */
+}
+
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    line-height: 1.2; /* Adjust line height */
+}
+
+.select2-container .select2-selection--single {
+    max-width: 200px; /* Max width of the Select2 box */
+    width: 100%; /* Full width within its parent */
+}
+
+.select2-dropdown {
+    left: 0; /* Align the dropdown to the left */
+    width: auto; /* Adjust width of the dropdown */
+}
+
+/* Table Styles */
+.table {
+    font-size: 0.7rem; /* Reduced font size for table */
+    width: 100%; /* Ensure the table spans the full width */
+    border-collapse: collapse; /* Collapse borders to remove space between cells */
+}
+
+.table th,
+.table td {
+    padding: 0.25rem; /* Reduced padding for table cells */
+    vertical-align: middle; /* Center content vertically */
+    overflow: auto; /* Allow scrolling within the cell */
+    white-space: nowrap; /* Keep content in a single line */
+    border: 1px solid #dee2e6; /* Add border to cells if needed */
+}
+
+.table-responsive {
+    height: 360px; /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure the header is above the tbody */
+    background-color: #4caf50; /* Keep the header background */
+    color: white; /* White text color */
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Light gray color for odd rows */
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: white; /* White color for even rows */
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075); /* Hover effect for rows */
+}
+
+/* Remove width constraints for specific columns */
+.narrow-col,
+.wider-col {
+    width: auto; /* Adjust or remove width settings */
+    max-width: none;
+}
+
+/* Custom style for the 'Action' column */
+.action-col {
+    min-width: 200px; /* Adjust this value based on your content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed content */
+}
+
+/* Custom style for the 'Action' column */
+.unit-col {
+    min-width: 88px; /* Adjust this value based on your content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed content */
+}
+
+/* Dedicated column for the icon */
+.icon-col {
+    width: 30px; /* Adjust width as needed for the icon */
+    text-align: center; /* Center-align the content */
+    vertical-align: middle; /* Middle-align vertically */
+}
+
+/* Plus icon style */
+.add-row {
+    display: none; /* Hidden by default */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Show the plus icon on hover */
+tr:hover .add-row {
+    display: inline-block; /* Show on row hover */
+}
+
+.drag-sign {
+    cursor: move; /* Change cursor to indicate dragging */
+    margin-right: 5px; /* Add some space between the sign and the text */
+    /* Add any other styling as required */
+}
+
+.scope-of-work {
+    text-align: left; /* Align text to the left */
+}
+
+.scope-of-work > * {
+    display: inline-block; /* Make children (icons, text, inputs) inline-block */
+    vertical-align: middle; /* Align elements vertically in the middle */
+}
+
+.scope-of-work i {
+    margin-right: 5px; /* Spacing between icon and input */
+}
+
+.scope-of-work input {
+    width: 90%; /* Reduced width of input boxes */
+    margin: 0;
+    padding: 4px 6px; /* Adjust padding for better text visibility */
+    line-height: 1; /* Adjust line height to fit content */
+    font-size: 0.8rem; /* Adjust font size if needed */
+}
+
+.scope-of-work-input {
+    text-align: left; /* Align text to the left */
+}
+
+.scope-of-work-input > * {
+    display: inline-block; /* Make children (icons, text, inputs) inline-block */
+    vertical-align: middle; /* Align elements vertically in the middle */
+}
+
+.scope-of-work-input i {
+    margin-right: 5px; /* Spacing between icon and input */
+}
+
+.scope-of-work-input {
+    width: 80%; /* Reduced width of input boxes */
+    margin: 0;
+    padding: 4px 6px; /* Adjust padding for better text visibility */
+    line-height: 1; /* Adjust line height to fit content */
+    font-size: 0.8rem; /* Adjust font size if needed */
+}
+
+/* Drag and Drop Styles */
+.dragging {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.drag-over {
+    border-top: 2px solid blue;
+    background-color: rgba(0, 0, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.fas.fa-grip-vertical {
+    cursor: move; /* Change cursor to indicate dragging */
+    margin-right: 5px; /* Add some space between the icon and the text */
+    /* Add any other styling as required */
+}
+
+/* Adjusting Select Width */
+.form-control.action,
+.form-control.unit {
+    width: 100%; /* Make sure dropdowns take the full width of the cell */
+    /* Other styles... */
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    padding: 2px; /* Reduce padding */
+    font-size: 0.7rem; /* Reduce font size if needed */
+    color: red; /* Or any color that indicates 'delete' or 'remove' */
+}
+
+.delete-button:hover {
+    color: darkred; /* Darker color on hover for better UX */
+}
+
+.delete-col {
+    width: 0.75%; /* Adjust this value as needed */
+    max-width: 0.75%;
+}
+#selectedItemsContainer tr.drag-over {
+    background-color: #e0e0e0; /* Subtle highlight color */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Responsive Table */
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+}

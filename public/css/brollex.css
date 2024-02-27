@@ -1,0 +1,281 @@
+body {
+    color: black;
+    margin: 10mm auto;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    width: 100%;
+    text-align: left;
+}
+
+.header {
+    top: 0;
+    height: 150px;
+}
+
+.footer {
+    bottom: 0;
+    height: 200px;
+    text-align: right;
+}
+
+.header .company-logo {
+    width: 13%; /* Adjust the width as needed */
+    max-width: none; /* Remove the max-width restriction */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 300px; /* Increase the max-height value to make the logo taller */
+    position: absolute;
+
+    /* Centering horizontally */
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Centering vertically */
+    top: 80px; /* Adjust this value if needed */
+    transform: translateY(-50%);
+}
+
+.footer .company-name {
+    font-family: Montserrat, sans-serif;
+    font-size: 48px;
+    position: absolute;
+    color: #84f5e6;
+    left: 0px; /* Adjust to your requirement to place it on the top right */
+    text-align: left;
+}
+
+.footer .company-address {
+    font-size: 27px;
+    color: black;
+    margin-top: 30px;
+    position: absolute;
+    left: 0px; /* Adjust to your requirement to place it on the top right */
+    text-align: left;
+}
+
+.footer .contact-info {
+    font-size: 27px;
+    color: black;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 0px; /* Adjust to your requirement to place it on the top right */
+    text-align: left;
+}
+.line-before {
+    display: none;
+}
+
+.line-after {
+    display: none;
+}
+.scope-of-work {
+    margin-top: 80px;
+    text-decoration: underline;
+}
+.content {
+    padding-top: 200px;
+    padding-bottom: 110px;
+}
+
+.footer .company-logo {
+    display: none;
+}
+.header .company-name {
+    display: none;
+}
+
+.header .contact-info {
+    display: none;
+}
+
+.header .company-address {
+    display: none;
+}
+
+.info-box {
+    padding: 10px; /* Adds some space inside the box */
+    text-align: Center; /* Aligns text to the left */
+    position: absolute; /* Position the box absolutely within its parent */
+    /* Centering horizontally */
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Centering vertically */
+    top: 220px; /* Adjust this value if needed */
+    transform: translateY(-50%);
+}
+
+#woNumber {
+    font-size: 17px;
+    color: black;
+    margin-top: 10px;
+}
+
+#propertyAddress {
+    font-size: 17px;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Add spacing between client code, WO number, and address */
+#clientCode {
+    font-size: 17px; /* Adjust font size as needed */
+    color: black;
+    margin-top: 120px; /* Adjust margin-top to create space */
+    text-align: left;
+    left: 20px;
+}
+
+.footer .thank-you-msg {
+    display: none;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        color: black;
+    }
+
+    .header,
+    .footer {
+        width: 100%;
+        text-align: left;
+        position: fixed;
+    }
+
+    .header {
+        top: 0;
+        height: 150px;
+    }
+
+    .footer {
+        bottom: 0;
+        height: 200px;
+        text-align: right;
+    }
+
+    .header .company-logo {
+        width: 18%; /* Adjust the width as needed */
+        max-width: none; /* Remove the max-width restriction */
+        height: auto; /* Maintain the aspect ratio */
+        max-height: 300px; /* Increase the max-height value to make the logo taller */
+        position: absolute;
+
+        /* Centering horizontally */
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        /* Centering vertically */
+        top: 150px; /* Adjust this value if needed */
+        transform: translateY(-50%);
+    }
+
+    .footer .company-name {
+        font-family: Montserrat, sans-serif;
+        font-size: 38px;
+        color: #84f5e6;
+        top: 0;
+    }
+
+    .footer .company-address {
+        font-size: 17px;
+        color: black;
+        margin-top: 25px;
+        /* Adjust margin as needed */
+    }
+
+    .footer .contact-info {
+        font-size: 17px;
+        color: black;
+        margin-top: 25px;
+        /* Adjust margin as needed */
+        margin-bottom: 20px;
+        /* Adjust the margin-bottom to create space */
+    }
+    .line-before {
+        display: none;
+    }
+
+    .line-after {
+        display: none;
+    }
+    .scope-of-work {
+        margin-top: 315px;
+        text-decoration: underline;
+    }
+    .content {
+        padding-top: 460px;
+        padding-bottom: 110px;
+    }
+
+    .page-break {
+        page-break-before: always;
+        margin-top: 460px;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    /* Add spacing between client code, WO number, and address */
+    #clientCode {
+        display: none;
+    }
+    .info-box {
+        padding: 10px; /* Adds some space inside the box */
+        text-align: Center; /* Aligns text to the left */
+        position: absolute; /* Position the box absolutely within its parent */
+        /* Centering horizontally */
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        /* Centering vertically */
+        top: 290px; /* Adjust this value if needed */
+        transform: translateY(-50%);
+    }
+
+    #woNumber {
+        font-size: 17px;
+        color: black;
+        margin-top: 10px;
+    }
+
+    #propertyAddress {
+        font-size: 17px;
+        color: black;
+        margin-top: 10px;
+    }
+
+    .footer .company-logo {
+        display: none;
+    }
+    .header .company-name {
+        display: none;
+    }
+
+    .header .contact-info {
+        display: none;
+    }
+
+    .header .company-address {
+        display: none;
+    }
+    .footer .thank-you-msg {
+        display: none;
+    }
+}

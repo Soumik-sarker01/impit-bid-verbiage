@@ -1,0 +1,98 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.8rem; /* Keeping the font size the same */
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.8rem;
+}
+
+.form-control {
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+.table {
+    font-size: 0.8rem; /* Keeping table font size the same */
+    border-collapse: collapse;
+}
+
+.container {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+.table th,
+.table td {
+    padding: 4px; /* Reduced padding for smaller rows and columns */
+    border-top: 1px solid #dee2e6;
+    text-align: left;
+}
+
+/* Checkbox size */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.scrollable-table {
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.scrollable-table table {
+    width: 100%;
+    margin-bottom: 0;
+    table-layout: fixed;
+}
+
+.scrollable-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #e9ecef;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.scrollable-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.scrollable-table th,
+.scrollable-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Adjusting the width of the UOM column */
+.scrollable-table .uom-column {
+    width: 60px; /* Adjust the width as needed */
+    padding: 4px; /* Consistent padding */
+    text-align: center; /* Center-align the content */
+}
+
+/* Keep the existing styles for checkbox and item columns */
+.scrollable-table .checkbox-column {
+    width: 30px;
+    padding: 4px;
+    text-align: center;
+}
+
+.scrollable-table .item-column {
+    width: auto; /* This column will take up the remaining space */
+    padding: 4px;
+}
