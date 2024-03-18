@@ -62,12 +62,12 @@ body {
 }
 .line-before {
     border-top: 1px solid #000;
-    margin: 5px 0;
+    margin: 15px 0;
 }
 
 .line-after {
     border-top: 1px solid #000;
-    margin: 5px 0;
+    margin: 15px 0;
 }
 .scope-of-work {
     text-decoration: bold;

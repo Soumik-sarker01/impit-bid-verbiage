@@ -151,14 +151,14 @@
                     <td class="narrow-col"><input type="number" class="form-control quantity" oninput="calculateTotalCost(this)" /></td>
                     <td class="narrow-col">
                     <select class="form-control unit">
+                        <option value=""></option>
                         <option value="LF">LF</option>
-                                <option value="EA">EA</option>
-                                <option value="CYD">CYD</option>
-                                <option value="CYF">CYF</option>
-                                <option value="SQFT">SQFT</option>
-                                <option value="UI">UI</option>
-                                <option value="HR">HR</option>
-
+                        <option value="EA">EA</option>
+                        <option value="CYD">CYD</option>
+                        <option value="CYF">CYF</option>
+                        <option value="SQFT">SQFT</option>
+                        <option value="UI">UI</option>
+                        <option value="HR">HR</option>
                     </select>
                     </td>
                     <td class="narrow-col"><input type="number" class="form-control cost-per-unit" oninput="calculateTotalCost(this)"></td>
@@ -219,6 +219,7 @@
                         <td class="narrow-col"><input type="number" class="form-control quantity"></td>
                         <td class="narrow-col">
                             <select class="form-control unit">
+                                <option value=""></option>
                                 <option value="LF">LF</option>
                                 <option value="EA">EA</option>
                                 <option value="CYD">CYD</option>
@@ -260,7 +261,7 @@
                 function handleDragStart(e) {
                     draggedRow = e.target;
                     e.dataTransfer.effectAllowed = 'move';
-                    setTimeout(() => e.target.classList.add('dragging'), 0);
+                    e.target.classList.add('dragging');
                 }
 
                 function handleDragOver(e) {
@@ -302,7 +303,6 @@
                 function resetDragStyles() {
                     document.querySelectorAll('#selectedItemsContainer tr').forEach(row => {
                         row.classList.remove('drag-over');
-                        row.style.transform = ''; // Reset any transformations
                     });
                 }
 
