@@ -397,6 +397,7 @@
             let scopeOfWorkCounts = {};
             let uniqueScopeIndex = 1; // Track unique scope of work
 
+
             bidData.forEach((item, index) => {
                 let reasonText = item.reason.trim() !== '' ?
                     `<strong>Reason -</strong> ${item.reason}.` : '';
@@ -420,7 +421,13 @@
                         `Install ${quantity} lockbox with code (1357) and place working keys inside. ${locationText} ${reasonText} <strong>Price: $${item.totalCost}</strong> <br>${disclaimerText}`;
                 } else if (item.action === 'Remove & Replace' && item.scopeOfWork === 'Door') {
                     itemContent =
-                        `${item.action} ${quantity} ${quantity} ${item.scopeOfWork} to secure. ${locationText} ${reasonText} <strong>Price: $${item.totalCost}</strong> <br>${disclaimerText}`;
+                        `${item.action} ${quantity} ${item.scopeOfWork} to secure. ${locationText} ${reasonText} <strong>Price: $${item.totalCost}</strong> <br>${disclaimerText}`;
+                } else if (item.action === 'Replace' && item.scopeOfWork === 'Door') {
+                    itemContent =
+                        `${item.action} ${quantity} ${item.scopeOfWork} to secure. ${locationText} ${reasonText} <strong>Price: $${item.totalCost}</strong> <br>${disclaimerText}`;
+                } else if (item.action === 'Replace' && item.scopeOfWork === 'Bilco Door') {
+                    itemContent =
+                        `${item.action} ${quantity} ${item.scopeOfWork} to secure. ${locationText} ${reasonText} <strong>Price: $${item.totalCost}</strong> <br>${disclaimerText}`;
                 } else if (item.unit !== 'EA') {
                     if (item.action === 'Remove & Replace') {
                         itemContent =
@@ -451,9 +458,8 @@
                             `After Antimicrobial treatment, Kilz approx. ${quantity} ${item.unit} ceiling with Bleach. ${locationText} ${reasonText} <strong>Price: $${item.totalCost}</strong> <br>${disclaimerText}`;
                     } else if (item.action === 'Perform' && item.scopeOfWork === 'Sales clean') {
                         itemContent =
-                            `${item.action} ${item.scopeOfWork} on ${quantity} ${item.unit} to include but not limited to Mopping, Vacuuming, Sweeping, cleaning windows, cleaning
-                             all appliances inside and out, wiping down all Counters, Cabinets, Sinks, toilets, Showers, Tubs, Ceiling Fans, etc. <strong>** Potential unseen damages unseen due to excess amount of debris present. Bids will be provided as needed after debris
-                             removal is completed. **</strong>
+                            `${item.action} ${item.scopeOfWork} on ${quantity} ${item.unit} to include but not limited to Mopping, Vacuuming, Sweeping, cleaning windows, cleaning all appliances inside and out, wiping down all Counters,
+                             Cabinets, Sinks, toilets, Showers, Tubs, Ceiling Fans, etc. <strong>** Potential unseen damages unseen due to excess amount of debris present. Bids will be provided as needed after debris removal is completed. **</strong>
                              ${locationText} ${reasonText} <strong>Price: $${item.totalCost}</strong> <br>${disclaimerText}`;
                     } else {
                         item.action === 'Remove'
@@ -530,12 +536,22 @@
 
                 // Append the item to the container
                 const listItem = document.createElement('div');
+
+                // Variable to hold the modified action
+                let modifiedAction = item.action;
+
+                // Apply condition on item.action
+                if (item.action === "Install Padlock & Hasp") {
+                    modifiedAction = `${item.action}`; // Example modification
+                } else {
+                    modifiedAction = `${item.action} ${item.scopeOfWork}`; // Another condition example
+                }
                 listItem.innerHTML =
-                    `<strong>${displayIndexWithSuffix}. ${item.action} ${item.scopeOfWork}: </strong>${itemContent}<br>`;
+                    `<strong>${displayIndexWithSuffix}. ${modifiedAction}: </strong>${itemContent}<br>`;
                 dataContainer.appendChild(listItem);
 
 
-                if (totalWordCount >= 350) {
+                if (totalWordCount >= 100) {
                     const pageBreak = document.createElement('div');
                     pageBreak.className = 'page-break';
                     dataContainer.appendChild(pageBreak);
